@@ -1,0 +1,102 @@
+#grandContainner{
+    width: 100%;
+    padding: 2%;
+    background:linear-gradient(to left , #efe3f999 ,#cde5ffac) ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containnerElem{
+    width: 45%;
+    height: 540px;
+    
+
+}
+
+#containnerImg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+}
+#containnerText{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#containnerText-titre{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
+    font-weight: bold;
+    color: var(--bleu);
+    width: 75%;
+    
+}
+#containnerText-paragraph{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    font-size: 1.2em;
+    color: var(--orange);
+}
+#containnerText-cta{
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 75%;
+}
+
+#fonction-containner{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fonction-elem-containner{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fonction-elem{
+    width: 95%;
+    height: 60%;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.fonction-elem+p{
+    color: var(--bleu);
+    text-align: center;
+    width: 80%;
+    font-weight: bolder;
+}
+#fonction-elem-dowload{
+    background-image: url("/imgs/dowload.gif");
+    border: solid var(--bleu) 2px;
+}
+#fonction-elem-notification{
+    background-image: url("/imgs/notification.gif");
+    border: solid var(--bleu) 2px;
+}
+#fonction-elem-organisation{
+    background-image: url("/imgs/organisation.gif");
+    background-position-y: center;
+    background-position-x: center;
+    border: solid var(--bleu) 2px;
+}
