@@ -23,8 +23,10 @@ class Employe extends Authenticatable
         'urlProfile',
         'email',
         'password',
+        'urlProfile',
+        'roleAdmin'
     ];
-
+    
     /**
      * The attributes that should be hidden for serialization.
      *

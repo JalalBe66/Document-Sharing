@@ -141,6 +141,15 @@
     align-items: center;
     justify-content: center;
 }
+#profile-icone-connection{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
 @media screen and (max-width:991px) {
     #nav-connection{
         width: 47%;
@@ -162,6 +171,5 @@
         width: 30px;
         
     }
-
 
 }

@@ -31,4 +31,10 @@ return [
         ],
     ],
 
+    "google"=>[
+        'client_id'=>"870404852450-dt6pnjmko38niepj3cqu9h4rtfshbhjh.apps.googleusercontent.com",
+        'client_secret'=>"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",
+        'redirect' => "http://localhost:8000/auth/google/callback"
+    ],
+
 ];

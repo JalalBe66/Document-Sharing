@@ -23,6 +23,6 @@ class InscriptionController extends Controller
             'password' =>Hash::make($request->password),
         ]);
         auth()->login($employe);
-        return redirect()->route("login");
+        return redirect()->route("Accueil");
     }
 }

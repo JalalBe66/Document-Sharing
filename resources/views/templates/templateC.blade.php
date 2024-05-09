@@ -11,19 +11,19 @@
 </head>
 <body>
   @section("header")
-    <div id="full-nav-content" >
+    <div class="fixed-top bg-light" id="full-nav-content" >
       <div id="full-nav" >
         <nav id="nav-principale" class="navbar navbar-expand-lg bg-body-tertiary">
           <div id="logo-icon-nav" class="container-fluid">
             <button id="icon-nav-toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span  class="navbar-toggler-icon"></span>
             </button>
-            <a  href="{{route('home')}}"><img  src="imgs/onetLogo.png"  width="100px"/></a>
+            <a  href="{{route('Accueil')}}"><img  src="imgs/onetLogo.png"  width="100px"/></a>
             <div class="col-1 "></div>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item col-11 "  >
-                  <a class="@yield('nav-link-home','nav-link')" aria-current="page" href="{{route('home')}}">Accueil</a>
+                  <a class="@yield('nav-link-home','nav-link')" aria-current="page" href="{{route('Accueil')}}">Accueil</a>
                   <div class="lign-nav-link-container"><div class="@yield('lign-nav-link-home','lign-nav-link')"></div></div>
                 </li>
                 <li class="nav-item col-11 ">
@@ -36,15 +36,15 @@
         </nav>
         <div id="nav-connection">
           @auth
-            <form   action="{{ route('logout') }}" method="post">
-              @csrf
-              <button id="deconnecter" type="submit" >Se déconnecter</button>
-            </form>
-            <a href="{{route('home')}}" class="connection-elem"><div>Mon compte</div></a>
+            <a href="{{route('Profile')}}" class="connection-elem"><div>Mon compte</div></a>
+            <div style="display:flex;align-items:center;justify-content:center;width:70%">
+              <div style="background-image: url('{{auth()->user()->urlProfile}}');margin-right:4%" id="profile-icone-connection" ></div>
+              <div style="color: var(--bleu);font-weight:550">{{auth()->user()->prenom}} {{auth()->user()->nom}} </div>
+            </div>
           @endauth
           @guest
-              <a href="{{ route('register') }}"class="connection-elem"><div>S'inscrire</div></a>
-              <a href="{{ route('login') }}" class="connection-elem"><div>Se connecter</div></a>
+              <a href="{{ route('Register') }}"class="connection-elem"><div>S'inscrire</div></a>
+              <a href="{{ route('Login') }}" class="connection-elem"><div>Se connecter</div></a>
           @endguest
         </div>
       </div>
