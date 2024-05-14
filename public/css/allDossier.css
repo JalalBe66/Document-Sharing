@@ -1,0 +1,124 @@
+body{
+    background-color: #f2f6fa;
+    font-family: sans-serif;
+}
+#add-F{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.8s;
+    padding:1%;
+    width: 35px;
+    height:35px;
+    background-color:#12386d;
+    border-radius:50%
+}
+.contain-croix{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+#add-F:hover{
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+#LT{
+    width: 50%;
+    height: 100%;
+    border-bottom: solid 3px aliceblue;
+}
+#RT{
+    border-left: 3px solid white;
+    width: 50%;
+    height: 100%;
+}
+#LB{
+    width: 50%;
+    height: 100%;
+    border-top-color: aliceblue;
+    border-right:solid 3px white ;
+}
+#RB{
+    width: 50%;
+    height: 100%;
+    border-top: solid 3px aliceblue;
+}
+
+#dossier{
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    padding-left: 2%;
+
+
+}
+#logo-doc{
+    width:20%;
+    height:100%;
+    background-position:left;
+    background-size:75%;
+    background-repeat: no-repeat;
+}
+#titre{
+    color: #12386d;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+#description {
+    font-size: 15px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    overflow-wrap:anywhere; /* ou overflow-wrap: break-word; */
+}
+
+
+
+#more-date{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#more{
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: transparent;
+    color:#12386d;
+    border: solid  #12386d 1px;
+    transition: background-color , color  0.5s;
+
+}
+#more:hover{
+    cursor: pointer;
+    background-color:#b02027 ;
+    border: none;
+    color: white;
+
+}
+#date{
+    width: 32%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.753);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

@@ -18,10 +18,10 @@
                 @endauth
             </div>
             <div id="conn-info-containner">
-                <div class="conn-info-elem">
+                <a href="{{route('Profile')}}" class="conn-info-elem">
                     <div style="background-image: url('imgs/profile.png')" class="icon-doc-elem"></div>
                     <p>Profile</p>
-                </div>
+                </a>
                 <!-- <div class="conn-info-elem">
                     <div style="background-image: url('imgs/logout.png')" class="icon-doc-elem"></div>
                     <p>Déconnecter</p>
@@ -39,22 +39,22 @@
                 </script>
                 </div>
                 <div id="doc-info-containner">
-                    <div class="doc-info-elem">
+                    <a href="{{route('Dossiers',auth()->user()->id)}}" class="doc-info-elem @yield('doc-dos','doc-active')">
                         <div style="background-image: url('imgs/folder.png')" class="icon-doc-elem"></div>
                         <p>Vos Dossiers</p>
-                    </div>
-                    <div class="doc-info-elem">
+                    </a>
+                    <a  href="" class="doc-info-elem @yield('doc-tra','doc-active')">
                         <div style="background-image: url('imgs/share.png')" class="icon-doc-elem"></div>
                         <p>Transfert</p>
-                    </div>
-                    <div class="doc-info-elem">
+                    </a>
+                    <a href="" class="doc-info-elem @yield('doc-rec','doc-active')">
                         <div style="background-image: url('imgs/receive-email.png')" class="icon-doc-elem"></div>
                         <p>Boîte de réception</p>
-                    </div>
-                    <div class="doc-info-elem">
+                    </a>
+                    <a id="@yield('doc-env','doc-active')" href="" class="doc-info-elem">
                         <div style="background-image: url('imgs/send-email.png')" class="icon-doc-elem"></div>
                         <p>Dossiers envoyés</p>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div id="div-service"></div>

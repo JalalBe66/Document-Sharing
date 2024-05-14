@@ -44,6 +44,6 @@ class GoogleController extends Controller
         }
 
         // Redirige l'utilisateur après la connexion
-        return redirect('/Accueil');
+        return redirect()->route("Accueil");
     }
 }

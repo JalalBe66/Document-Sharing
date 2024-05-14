@@ -49,4 +49,14 @@ class Employe extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function dossier(){
+        return $this->hasMany(Dossier::class,"propriétaire");
+    }
+    public function fichier(){
+        return $this->hasMany(Fichier::class,"propriétaire");
+    }
+    public function dossiers(){
+        return $this->belongsToMany(Dossier::class);
+    }
 }

@@ -1,0 +1,12 @@
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+display: inline-block;
+background-color: #12386d;
+color: white;
+font-weight:600;
+border-radius: 15px;
+cursor: pointer;
+}

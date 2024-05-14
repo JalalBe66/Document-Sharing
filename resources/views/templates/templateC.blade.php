@@ -43,7 +43,7 @@
             </div>
           @endauth
           @guest
-              <a href="{{ route('Register') }}"class="connection-elem"><div>S'inscrire</div></a>
+              <!-- <a href="{{ route('Register') }}"class="connection-elem"><div>S'inscrire</div></a> -->
               <a href="{{ route('Login') }}" class="connection-elem"><div>Se connecter</div></a>
           @endguest
         </div>
