@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('fichiers', function (Blueprint $table) {
             $table->id();
-            $table->string("nomFile",40)->nullable()->default("Sans Name");
+            $table->string("nomFile",40)->nullable()->unique();
             $table->enum("typeFile",["PDF","MP4","IMG","TXT","Autre"]);
             $table->text("urlFile");
             $table->string("imageFile");

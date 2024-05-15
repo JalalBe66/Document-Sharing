@@ -57,6 +57,9 @@ class ConnexionController extends Controller
             unlink($employe->urlProfile);
             DB::table("employes")->where("id" , $id)->delete();
         }
+        else{
+            DB::table("employes")->where("id" , $id)->delete();
+        }
         return redirect()->route("Accueil");
     }
 }

@@ -59,4 +59,5 @@ class Employe extends Authenticatable
     public function dossiers(){
         return $this->belongsToMany(Dossier::class);
     }
+    
 }

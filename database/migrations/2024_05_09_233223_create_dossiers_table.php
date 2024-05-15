@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('dossiers', function (Blueprint $table) {
             $table->id();
-            $table->string("nomDoc",40)->nullable()->default("Sans Titre");
+            $table->string("nomDoc",40)->nullable()->default("Sans Titre")->unique();
             $table->text("descDoc");
             $table->integer("Propriétaire");
             $table->foreign("propriétaire")->references("id")->on("employes")->onDelete("cascade")->onUpdate("cascade");

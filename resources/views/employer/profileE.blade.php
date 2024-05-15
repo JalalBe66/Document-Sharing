@@ -20,11 +20,11 @@
                     <div id="contContInp">
                         <div class="contInp">
                             <div><label >Nom</label></div>
-                            <div class="inp"><input id="inpV"  placeholder="Nouveau Nom" type="text" name="nom" id=""></div>
+                            <div class="inp"><input id="inpV" value="{{auth()->user()->nom}}" placeholder="Nouveau Nom" type="text" name="nom" id=""></div>
                         </div>
                         <div class="contInp">
                             <div><label >Prenom</label></div>
-                            <div class="inp"><input id="inpV" placeholder="Nouveau Prenom" type="text" name="prenom" id=""></div>
+                            <div class="inp"><input value="{{auth()->user()->prenom}}" id="inpV" placeholder="Nouveau Prenom" type="text" name="prenom" id=""></div>
                         </div>
                     </div>
                 </div>

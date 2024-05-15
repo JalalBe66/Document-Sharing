@@ -19,7 +19,9 @@
           <label >Password</label>
           <input  name="password" type="password" class="form-control" >
         </div>
-  
+        @if(session()->has("error"))
+          <span style="color: red;">{{session("error")}}</span>
+        @endif
         <div class="inp-submit">
           <button style="font-weight: bolder;" class="button-submit" type="submit">Login</button>
           <span>ou</span>

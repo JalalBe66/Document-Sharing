@@ -11,7 +11,7 @@ class InscriptionController extends Controller
 {
     public function show()
     {
-        return view('connection.register');
+        return view('admin.register');
     }
 
     public function register(Request $request)
@@ -22,7 +22,7 @@ class InscriptionController extends Controller
             'email' => $request->email,
             'password' =>Hash::make($request->password),
         ]);
-        auth()->login($employe);
-        return redirect()->route("Accueil");
+        
+        return redirect()->route("Register")->with("success","Employé enregistré avec succès");
     }
 }

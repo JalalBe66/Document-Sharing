@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
+use App\Mail\MailAtegration;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\Employe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class GoogleController extends Controller
 {
@@ -28,7 +30,8 @@ class GoogleController extends Controller
         if ($existingUser) {
             // Connecte l'utilisateur existant
             Auth::login($existingUser);
-        } else {
+        } 
+        elseif(isset(auth()->user()->roleAdmin)&&auth()->user()->roleAdmin == true) {
             // Crée un nouvel utilisateur s'il n'existe pas encore dans la base de données
             $newUser = new Employe();
             $newUser->nom = $user->user["family_name"];
@@ -36,11 +39,16 @@ class GoogleController extends Controller
             $newUser->email = $user->email;
             $newUser->password = Hash::make($user->password);
             $newUser->urlProfile = $user->avatar;
+            //envoyer un email pour informer l'utilisateur
+            Mail::to($user->email)->send(new MailAtegration());
             // Ajoute d'autres champs nécessaires
             $newUser->save();
 
             // Connecte le nouvel utilisateur
-            Auth::login($newUser);
+            return redirect()->route("Register")->with("success" , "Utilisateur enregistrer avec success");
+        }
+        else{
+            return redirect()->route("Login")->with("error","Email ou mot de passe incorrects ou non validés");
         }
 
         // Redirige l'utilisateur après la connexion

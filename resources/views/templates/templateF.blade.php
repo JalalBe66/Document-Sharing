@@ -22,6 +22,12 @@
                     <div style="background-image: url('imgs/profile.png')" class="icon-doc-elem"></div>
                     <p>Profile</p>
                 </a>
+                @if(auth()->user()->roleAdmin == true)
+                <a id="@yield('doc-env','doc-active')" href="{{route('Register')}}" class="conn-info-elem">
+                    <div style="background-image: url('imgs/ajouter.png')" class="icon-doc-elem"></div>
+                    <p>Ajouter employés</p>
+                </a>
+                @endif
                 <!-- <div class="conn-info-elem">
                     <div style="background-image: url('imgs/logout.png')" class="icon-doc-elem"></div>
                     <p>Déconnecter</p>
@@ -50,10 +56,6 @@
                     <a href="" class="doc-info-elem @yield('doc-rec','doc-active')">
                         <div style="background-image: url('imgs/receive-email.png')" class="icon-doc-elem"></div>
                         <p>Boîte de réception</p>
-                    </a>
-                    <a id="@yield('doc-env','doc-active')" href="" class="doc-info-elem">
-                        <div style="background-image: url('imgs/send-email.png')" class="icon-doc-elem"></div>
-                        <p>Dossiers envoyés</p>
                     </a>
                 </div>
             </div>

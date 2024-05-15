@@ -1,15 +1,11 @@
 <?php
 
 use App\Http\Controllers\Auth\GoogleController as AuthGoogleController;
-use App\Http\Controllers\Auth\LinkdinController;
-use App\Http\Controllers\Auth\LinkedinController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\DeconnexionController;
 use App\Http\Controllers\DossierController;
 use App\Http\Controllers\FichierController;
-use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\InscriptionController;
-use App\Models\Dossier;
 use Illuminate\Support\Facades\Route;
 
 
@@ -75,11 +71,10 @@ Route::get('/', function () {
 
 // login logout
 
-Route::middleware("guest")->group(function(){
     //Les routes d'inscription
     Route::get("/register", [InscriptionController::class, "show"])->name("Register");
     Route::post("/register", [InscriptionController::class, "register"]) ->name("Register.post");
-});
+
 
 
 Route::middleware("guest")->group(function(){
